@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin HyperionRP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>⚙️ Admin</h2>
+    <ul>
+      <li onclick="showSection('dashboard')">🏠 Tableau de bord</li>
+      <li onclick="showSection('boutique')">🛒 Boutique</li>
+      <li onclick="showSection('annonces')">📢 Annonces</li>
+      <li onclick="showSection('recrutement')">👥 Recrutement</li>
+      <li onclick="showSection('staff')">🧑‍🎓 Staff</li>
+    </ul>
+  </div>
+  <div class="main">
+    <h1 id="title">Panel d'administration HyperionRP</h1>
+
+    <section id="dashboard" class="section active">
+      <p>Bienvenue dans votre panneau de gestion HyperionRP.</p>
+    </section>
+
+    <section id="boutique" class="section">
+      <h2>🛒 Gérer la Boutique</h2>
+      <form id="form-boutique">
+        <input type="text" placeholder="Nom de l'article" required>
+        <input type="number" placeholder="Prix (€)" required>
+        <button type="submit">Ajouter</button>
+      </form>
+      <ul id="liste-boutique"></ul>
+    </section>
+
+    <section id="annonces" class="section">
+      <h2>📢 Gérer les Annonces</h2>
+      <textarea placeholder="Écris ton annonce ici..."></textarea><br>
+      <button>Publier</button>
+    </section>
+
+    <section id="recrutement" class="section">
+      <h2>👥 Candidatures Reçues</h2>
+      <p>(Connexion Google Forms en option plus tard)</p>
+      <ul>
+        <li>Exemple : joueur1@gmail.com - "Je veux être modérateur"</li>
+      </ul>
+    </section>
+
+    <section id="staff" class="section">
+      <h2>🧑‍🎓 Gérer l'Équipe</h2>
+      <form id="form-staff">
+        <input type="text" placeholder="Pseudo Minecraft" required>
+        <input type="text" placeholder="Rôle (ex: Gérant, Dev)">
+        <button type="submit">Ajouter</button>
+      </form>
+      <ul id="liste-staff"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
